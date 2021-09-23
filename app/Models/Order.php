@@ -25,4 +25,9 @@ class Order extends Model
     {
         return $this->belongsTo(Status::class);
     }
+
+    public function executor()
+    {
+        return $this->belongsTo(User::class, 'executor');
+    }
 }
